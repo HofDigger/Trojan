@@ -8,7 +8,7 @@ def generate_key(client_ip):
         key_file.write(random_key)
     return random_key
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind("127.0.0.1", 8080)
+s.bind(("127.0.0.1", 8080))
 s.listen(1)
 print("Server is listening")
 while True:
